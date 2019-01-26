@@ -1,0 +1,23 @@
+{
+  "name": "gulu",
+  "version": "0.0.1",
+  "description": "一个VueUI组件\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D,UI组件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baisemede/vue-gulu-demo.git"
+  },
+  "keywords": [
+    "Vue",
+    "UI"
+  ],
+  "author": "baisemede",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/baisemede/vue-gulu-demo/issues"
+  },
+  "homepage": "https://github.com/baisemede/vue-gulu-demo#readme"
+}
