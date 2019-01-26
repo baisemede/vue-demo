@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/baisemede/vue-gulu-demo/issues"
   },
-  "homepage": "https://github.com/baisemede/vue-gulu-demo#readme"
+  "homepage": "https://github.com/baisemede/vue-gulu-demo#readme",
+  "dependencies": {
+    "vue": "^2.5.22"
+  }
 }
