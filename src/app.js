@@ -14,11 +14,15 @@ new Vue({
     el:'#app',
     data:{
         loading1:false,
-        loading2:false
+        loading2:false,
+        message: 'hi'
+    },
+    created(){
+
     },
     methods:{
         inputChange(e){
-            console.log(e.target.value)
+           
         }
     }
 })
