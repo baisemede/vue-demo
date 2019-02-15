@@ -12,20 +12,31 @@
 <body>
 
     <div id="app">
-        <g-button icon='download'  icon-position='right' :loading='loading1' @click="loading1=!loading1">下载</g-button>
-        <g-button icon='Setting' :loading='loading2' @click="loading2=!loading2" >设置</g-button>
-        <g-button icon='down' icon-position='right' >下拉菜单</g-button>
-        <g-button icon='thumbs-up'  >点赞</g-button>
-        <g-button-group>
-            <g-button icon='left' >上一页</g-button>
-            <g-button  >暂停</g-button>            
-            <g-button icon='right' icon-position='right' >下一页</g-button>
-        </g-button-group>
-        <div id="test"></div>
+        <div class="box">
+                <g-input value="张三" disabled> </g-input>
+                <g-input value="666" readonly> </g-input>
+                <g-input value="999" > </g-input>
+        </div>
+     
+        <div class="box">
+                <g-input value="9" error="不能少于两个字" > </g-input>
+        </div>
+        
+        <div class="box  ">
+            <g-button icon='download' icon-position='right' :loading='loading1' @click="loading1=!loading1">下载</g-button>
+            <g-button icon='Setting' :loading='loading2' @click="loading2=!loading2">设置</g-button>
+            <g-button icon='down' icon-position='right'>下拉菜单</g-button>
+            <g-button icon='thumbs-up'>点赞</g-button>
+            <g-button-group>
+                <g-button icon='left'>上一页</g-button>
+                <g-button>暂停</g-button>
+                <g-button icon='right' icon-position='right'>下一页</g-button>
+            </g-button-group>
+        </div>
     </div>
-    
+
     <script src="./src/app.js"></script>
-   
+
 </body>
 
 </html>

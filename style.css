@@ -9,6 +9,9 @@
 body{
     font-size: var(--font--size);
 }
+.box{
+    margin: 8px;
+}
 :root{
     --button-height:32px;
     --font--size:14px;
