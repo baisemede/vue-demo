@@ -8,13 +8,13 @@
 ## 开始使用
 
 1.添加 CSS 样式
-    使用本框架前，请在 CSS 中开启 border-box
+使用本框架前，请在 CSS 中开启 border-box
     ```
     *{box-sizing:border-box;}
     ```
-    IE  8 及以上浏览器都支持此样式
+IE  8 及以上浏览器都支持此样式
 
-    你还需要设置默认颜色等变量（后续会改为SCSS变量）
+你还需要设置默认颜色等变量（后续会改为SCSS变量）
     ```
     html{
         --button-height:32px;
@@ -27,14 +27,13 @@
         --border-color-hover:#666;
     }
     ```
-    IE  15 及以上浏览器都支持此样式
+IE  15 及以上浏览器都支持此样式
 
 2.安装 gulu
     ```
     npm i --save  vue-gulu-demo
     ```
-
-    3.引入gulu
+3.引入gulu
     ```
     import {Button, ButtonGroup, Icon} from 'vue-gulu-demo'
     import 'vue-gulu-demo/dist/index.css'
