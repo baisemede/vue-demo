@@ -12,15 +12,8 @@
 <body>
 
     <div id="app">
-        <g-layout style="height: 100vh;">
-            <g-sider class="demo">sider</g-sider>
-            <g-layout>
-                <g-header>header</g-header>
-                <g-content>content</g-content>
-                <g-footer>footer</g-footer>
-            </g-layout>
-        </g-layout>
-        
+
+        <button @click="showToast">按钮</button>
 
         <div class="box">
             <g-input v-model="message"></g-input>
