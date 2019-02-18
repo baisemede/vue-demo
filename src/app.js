@@ -38,12 +38,22 @@ new Vue({
 
     },
     methods: {
-        showToast() {
+        showToast1() {
+            this.showToast('top')
+        },
+        showToast2() {
+            this.showToast('middle')
+        },
+        showToast3() {
+            this.showToast('bottom')
+        },
+
+        showToast(position) {
             this.$toast(`我是第${parseInt(Math.random() * 100)}个弹出框`, {
-                position: 'top',
+                position,
                 enableHtml: false,
                 closeButton: {
-                    text: '弹出',
+                    text: '关闭',
                     callback() {
                         console.log('已经弹出')
                     }
