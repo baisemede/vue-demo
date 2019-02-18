@@ -39,8 +39,8 @@ new Vue({
     },
     methods: {
         showToast() {
-            this.$toast('我是一个弹出框', {
-                position: 'middle',
+            this.$toast(`我是第${parseInt(Math.random() * 100)}个弹出框`, {
+                position: 'top',
                 enableHtml: false,
                 closeButton: {
                     text: '弹出',
