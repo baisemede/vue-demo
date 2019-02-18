@@ -58,8 +58,7 @@ new Vue({
                         console.log('已经弹出')
                     }
                 },
-                autoClose: false,
-                autoCloseDelay: 3
+                autoClose: 3,
             })
         }
     }
