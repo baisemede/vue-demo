@@ -36,23 +36,23 @@ export default {
   },
   methods: {
     xxx() {
-      this.eventBus.$emit("update:selected", this.name);
+      this.eventBus.$emit('update:selected', this.name, this);
     }
   }
 };
 </script>
 <style lang="scss" scoped>
+$blue: #57bae8;
 .tabs-item {
-  flex-shrink: 0;
-  padding: 0 1em;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  color: #525252;
-  background-color: #f0f3f4;
-  &.active {
-    background: #57bae8;
-    color: white;
+    flex-shrink: 0;
+    padding: 0 1em;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    &.active {
+      color: $blue;
+      font-weight: bold;
+    }
   }
-}
 </style>
