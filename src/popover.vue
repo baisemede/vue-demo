@@ -20,17 +20,17 @@ export default {
   props: {
     position: {
       type: String,
-      default: "right",
+      default: "top",
       validator(value) {
         return ["top", "bottom", "left", "right"].indexOf(value) >= 0;
       }
-    }
-  },
-  trigger: {
-    type: String,
-    default: "click",
-    validator(value) {
-      return ["click", "hover"].indexOf(value) >= 0;
+    },
+    trigger: {
+      type: String,
+      default: "click",
+      validator(value) {
+        return ["click", "hover"].indexOf(value) >= 0;
+      }
     }
   },
   data() {
@@ -68,6 +68,7 @@ export default {
       }
     }
   },
+
   methods: {
     positionContent() {
       const { contentWrapper, triggerWrapper } = this.$refs;
