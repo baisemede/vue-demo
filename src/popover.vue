@@ -173,9 +173,11 @@ $border-radius: 4px;
     }
     &::before {
       border-top-color: black;
+      border-bottom: none;
       top: 100%;
     }
     &::after {
+      border-bottom: none;
       border-top-color: white;
       top: calc(100% - 1px);
     }
@@ -188,9 +190,11 @@ $border-radius: 4px;
     }
     &::before {
       border-bottom-color: black;
+      border-bottom: none;
       bottom: 100%;
     }
     &::after {
+      border-bottom: none;
       border-bottom-color: white;
       bottom: calc(100% - 1px);
     }
@@ -205,9 +209,11 @@ $border-radius: 4px;
     }
     &::before {
       border-left-color: black;
+      border-bottom: none;
       left: 100%;
     }
     &::after {
+      border-bottom: none;
       border-left-color: white;
       left: calc(100% - 1px);
     }
@@ -221,9 +227,11 @@ $border-radius: 4px;
     }
     &::before {
       border-right-color: black;
+      border-bottom: none;
       right: 100%;
     }
     &::after {
+      border-bottom: none;
       border-right-color: white;
       right: calc(100% - 1px);
     }
