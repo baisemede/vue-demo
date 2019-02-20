@@ -1,6 +1,6 @@
 <template>
   <div class="popover" @click.stop="xxx">
-    <div class="content-wrapper" v-if="visible" @click.stop> <!-- @click.stop 可以阻止事件冒泡!!! -->
+    <div class="content-wrapper" v-if="visible" @click.stop> <!-- 添加.stop 可以阻止事件冒泡!!! -->
       <slot name="content"></slot>
     </div>
     <slot></slot>
