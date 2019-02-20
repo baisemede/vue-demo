@@ -1,9 +1,11 @@
 <template>
-  <div class="popover" @click.stop="xxx">
-    <div class="content-wrapper" v-if="visible" @click.stop> <!-- 添加.stop 可以阻止事件冒泡!!! -->
+  <div class="popover" @click="onClick" ref="popover">
+    <div ref="contentWrapper" class="content-wrapper" v-if="visible">
       <slot name="content"></slot>
     </div>
-    <slot></slot>
+    <span ref="triggerWrapper">
+      <slot></slot>
+    </span>
   </div>
 </template>
 
@@ -14,16 +16,46 @@ export default {
     return { visible: false };
   },
   methods: {
-    xxx() {
-      this.visible = !this.visible;
+    positionContent() {
+      document.body.appendChild(this.$refs.contentWrapper);
+      let {
+        width,
+        height,
+        top,
+        left
+      } = this.$refs.triggerWrapper.getBoundingClientRect();
+      this.$refs.contentWrapper.style.left = left + window.scrollX + "px";
+      this.$refs.contentWrapper.style.top = top + window.scrollY + "px";
+    },
+    onClickDocument(e) {
+      if (
+        this.$refs.popover &&
+        (this.$refs.popover === e.target ||
+          this.$refs.popover.contains(e.target))
+      ) {
+        return;
+      }
+      this.close();
+    },
+    open() {
+      this.visible = true;
       this.$nextTick(() => {
-        let eventHandler = () => {
-          this.visible = false;
-          document.removeEventListener("click", eventHandler); //删除当前函数，防止每次点击都新增！！！
-        };
-        //添加click事件，点击按钮外部触发 使popover 隐藏
-        document.addEventListener("click", eventHandler);
+        this.positionContent();
+        document.addEventListener("click", this.onClickDocument);
       });
+    },
+    close() {
+      this.visible = false;
+      document.removeEventListener("click", this.onClickDocument);
+    },
+    onClick(event) {
+      if (this.$refs.triggerWrapper.contains(event.target)) {
+        if (this.visible === true) {
+          this.close();
+        } else {
+          this.open();
+        }
+      }
     }
   }
 };
@@ -34,13 +66,12 @@ export default {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  .content-wrapper {
-    position: absolute;
-    background-color: #b9b9c8;
-    color: white;
-    bottom: 100%;
-    left: 0;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  }
+}
+.content-wrapper {
+  background-color: #57bae8;
+  color: white;
+  position: absolute;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  transform: translateY(-100%);
 }
 </style>
