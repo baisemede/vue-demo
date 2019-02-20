@@ -1,34 +1,46 @@
 <!doctype html>
 <html lang="zh-Hans">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>轱辘</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <title>轱辘</title>
+    </head>
 
-<body>
+    <body>
 
-    <div id="app" style="padding-top: 100px; padding-left: 100px;">
-        <div style="padding: 5px;">
-            <g-popover>
-                <template slot="content">
-                    <div>LOL比赛集锦</div>
-                </template>
-                <button>LOL</button>
-            </g-popover>
-            <g-popover>
-                <template slot="content">
-                    <div>lpl比赛日期</div>
-                </template>
-                <button>LPL</button>
-            </g-popover>
+        <div id="app">
+            <div style="padding: 60px;">
+                <g-popover position="bottom">
+                    <template slot="content">
+                        <div>LOL比赛集锦</div>
+                    </template>
+                    <g-button>LOL</g-button>
+                </g-popover>
+                <g-popover position="right">
+                    <template slot="content">
+                        <div>lpl比赛日期</div>
+                    </template>
+                    <g-button>LPL</g-button>
+                </g-popover>
+                <g-popover position="top">
+                    <template slot="content">
+                        <div>lck比赛日期</div>
+                    </template>
+                    <g-button>LOL</g-button>
+                </g-popover>
+                <g-popover position="left">
+                    <template slot="content">
+                        <div>lck比赛日期</div>
+                    </template>
+                    <g-button>LCK</g-button>
+                </g-popover>
+            </div>
         </div>
-    </div>
-    <script src="./src/app.js"></script>
+        <script src="./src/app.js"></script>
 
-</body>
+    </body>
 
 </html>
