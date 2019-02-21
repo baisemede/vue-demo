@@ -9,7 +9,7 @@
 </template>
 <script>
 export default {
-  name: "gulu-TabsHead",
+  name: "gulu-tabs-head",
   inject: ["eventBus"],
   mounted() {
     this.eventBus.$on("update:selected", (item, vm) => {

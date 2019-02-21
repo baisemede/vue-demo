@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  name: "gulu-TabsPane",
+  name: "gulu-tabs-pane",
   inject: ["eventBus"],
   data() {
     return {
