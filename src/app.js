@@ -38,9 +38,9 @@ Vue.component('g-tabs-head', TabsHead)
 Vue.component('g-tabs-body', TabsBody)
 Vue.component('g-tabs-item', TabsItem)
 Vue.component('g-tabs-pane', TabsPane)
-Vue.component('g-popover',Popover)
-Vue.component('g-collapse',Collapse)
-Vue.component('g-collapse-item',CollapseItem)
+Vue.component('g-popover', Popover)
+Vue.component('g-collapse', Collapse)
+Vue.component('g-collapse-item', CollapseItem)
 Vue.use(plugin)
 
 new Vue({
@@ -48,9 +48,9 @@ new Vue({
     data: {
         loading1: false,
         loading2: false,
-        message: 'hi',  
-        selectedTab: 'sports'
-        
+        message: 'hi',
+        selectedTab: ['2']
+
     },
     created() {
 
