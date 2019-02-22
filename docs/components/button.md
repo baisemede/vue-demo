@@ -1,8 +1,5 @@
----
-title:Button
----
 
-# 使用方法
+# Button
 
 <ClientOnly>
   <button-demos></button-demos>

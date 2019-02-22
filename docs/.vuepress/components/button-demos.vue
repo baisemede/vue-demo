@@ -1,9 +1,11 @@
 
 <template>
   <div>
-    <g-button icon="left">上一页</g-button>
-    <g-button>暂停</g-button>
-    <g-button icon="right" icon-position="right">下一页</g-button>
+    <g-button>默认按钮</g-button>
+    <g-button icon="Setting" :loading="loading2" @click="loading2=!loading2">设置</g-button>
+    <g-button icon="down" icon-position="right">下拉菜单</g-button>
+    <g-button icon="thumbs-up">点赞</g-button>
+    <pre><code>{{content}}</code></pre>
   </div>
 </template>
 <script>
@@ -15,13 +17,11 @@ export default {
   data() {
     return {
       content: `
-          <g-button>默认按钮</g-button>
-          <g-button icon="settings">默认按钮</g-button>
-          <g-button :loading="true">默认按钮</g-button>
-          <g-button disabled>默认按钮</g-button>
-      `
-        .replace(/\t+| +/g, "")
-        .trim()
+<g-button>默认按钮</g-button>
+<g-button icon='Setting' :loading='loading2' @click="loading2=!loading2">设置</g-button>
+<g-button icon="down" icon-position="right">下拉菜单</g-button>
+<g-button icon='thumbs-up'>点赞</g-button>
+    `.trim()
     };
   }
 };
