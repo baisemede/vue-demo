@@ -1,4 +1,5 @@
 module.exports = {
+    base:'/vue-gulu-demo/',
     title: '轱辘UI',
     description: '轱辘 UI 是一个好用的 UI 框架',
     themeConfig:{
@@ -20,7 +21,12 @@ module.exports = {
                     collapsable: true,
                     children: [
                         '/components/button',
-                       
+                        '/components/input',
+                        '/components/grid',
+                        '/components/popover',
+                        '/components/toast',
+                        '/components/tabs',
+                        '/components/layout',
                     ]
                 },
      ]

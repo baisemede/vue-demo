@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper" :class="toastClasses">
+  <div class="gulu-toast" :class="toastClasses">
     <div class="toast" ref="toast">
       <div class="message">
         <slot v-if="!enableHtml"></slot>
@@ -114,7 +114,7 @@ $toast-bg: rgba(0, 0, 0, 0.75);
     opacity: 1;
   }
 }
-.wrapper {
+.gulu-toast {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
@@ -160,24 +160,14 @@ $toast-bg: rgba(0, 0, 0, 0.75);
   .close {
     padding-left: 16px;
     flex-shrink: 0;
+    cursor: pointer;
   }
   .line {
     height: 100%;
     border-left: 1px solid #666;
     margin-left: 16px;
   }
-  &.position-top {
-    top: 0;
-    transform: translateX(-50%);
-  }
-  &.position-bottom {
-    bottom: 0;
-    transform: translateX(-50%);
-  }
-  &.position-middle {
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
+
 }
 </style>
 
