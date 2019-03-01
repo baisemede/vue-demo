@@ -1,7 +1,7 @@
 module.exports = {
     base:'/vue-demo/',
-    title: '轱辘UI',
-    description: '轱辘 UI 是一个好用的 UI 框架',
+    title: 'MOMO-UI',
+    description: '一个好用的 UI 框架',
     themeConfig:{
         nav:[
             {text:'主页',link:'/'},
@@ -27,6 +27,7 @@ module.exports = {
                         '/components/toast',
                         '/components/tabs',
                         '/components/layout',
+                        '/components/collapse',
                     ]
                 },
      ]

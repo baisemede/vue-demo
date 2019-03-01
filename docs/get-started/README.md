@@ -11,7 +11,7 @@ title: 快速上手
 请参考 [安装](../install/) 章节
 
 
-## Hello World
+## 引入
 
 ```javascript
 import {Button} from 'suimomo'

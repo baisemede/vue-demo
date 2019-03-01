@@ -1,6 +1,5 @@
 <template>
   <div style="padding-top: 16px;">
-    <h2>支持 HTML</h2>
     <p>
       <strong>预览</strong>
     </p>
