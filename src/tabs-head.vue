@@ -1,3 +1,4 @@
+
 <template>
   <div class="tabs-head" ref="head">
     <slot></slot>
